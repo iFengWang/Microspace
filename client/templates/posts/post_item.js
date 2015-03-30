@@ -10,6 +10,9 @@ Template.postItem.helpers({
 	ownPost:function(){
 
 		return Meteor.userId() === this.userId;
+	},
+	commentsCount:function(){
+		return Comments.find({postId:this._id}).count();
 	}
 
 });

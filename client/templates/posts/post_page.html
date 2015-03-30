@@ -1,3 +1,16 @@
 <template name="postPage">
 	{{> postItem}}
+	<ul class="comments">
+		{{#each comments}}
+			{{> commentItem}}
+		{{/each}}
+	</ul>
+
+	{{#if currentUser}}
+		{{> commentSubmit}}
+	{{else}}
+		<p>请先登录才能评论</p>
+	{{/if}}
+
+
 </template>
