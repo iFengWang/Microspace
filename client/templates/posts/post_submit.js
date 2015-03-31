@@ -35,8 +35,8 @@ Template.postSubmit.events({
 			if(result.postExists)
 				throwError("此贴子的链接已经存在！");
 
-			Router.go('postPage',{_id:result._id});
+			// Router.go('postPage',{_id:result._id});
 		});
-		// Router.go('postsList');
+		Router.go('postsList',{postsLimit:4});
 	}
 });
