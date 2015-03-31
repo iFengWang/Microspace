@@ -1,5 +1,7 @@
 <template name="postPage">
+
 	{{> postItem}}
+	
 	<ul class="comments">
 		{{#each comments}}
 			{{> commentItem}}
@@ -11,6 +13,5 @@
 	{{else}}
 		<p>请先登录才能评论</p>
 	{{/if}}
-
 
 </template>
