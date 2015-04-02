@@ -1,10 +1,11 @@
 <template name="postItem">
   <div class="post">
+  	<a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
     <div class="post-content">
       <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-      提交者:{{author}} | 
+      {{pluralize votes 'vote'}} | 提交者:{{author}} | 
       <a href="{{pathFor 'postPage'}}">{{commentsCount}}条评论</a>
-      {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">编辑</a>{{/if}}
+      {{#if ownPost}} | <a href="{{pathFor 'postEdit'}}">编辑</a>{{/if}}
     </div>
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
   </div>
